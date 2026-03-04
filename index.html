@@ -3,26 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LitPath Labs</title>
+    <title>LitPath Labs | AI Systems & Prototyping</title>
     <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background-color: #0a0a0a;
-            color: #ededed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
+        :root {
+            --bg-color: #0a0a0a;
+            --text-primary: #ededed;
+            --text-secondary: #a0a0a0;
+            --accent: #4f46e5;
+            --card-bg: #171717;
+            --border: #262626;
         }
-        h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-        p { font-size: 1.2rem; color: #a0a0a0; }
+        
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        h1 { 
+            font-size: 3.5rem; 
+            margin: 0 0 0.5rem 0; 
+            letter-spacing: -0.025em;
+        }
+
+        .subtitle { 
+            font-size: 1.25rem; 
+            color: var(--text-secondary); 
+            margin: 0;
+            font-weight: 300;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .philosophy {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            margin: 0 0 1rem 0;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: rgba(79, 70, 229, 0.1);
+            color: #818cf8;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #818cf8;
+        }
     </style>
 </head>
 <body>
-    <h1>LitPath Labs</h1>
-    <p>AI Systems & Prototyping</p>
-    <p>Operations commencing soon.</p>
+    <header>
+        <h1>LitPath Labs</h1>
+        <p class="subtitle">AI Systems & Prototyping</p>
+    </header>
+
+    <main>
+        <div class="philosophy">
+            <p>Targeting model obsolescence through user self-sufficiency. We build strictly for technical efficiency, empirical rigor, and uncompromised accuracy.</p>
+        </div>
+
+        <h2>Active Research & Deployments</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Contextual Norm Propagation</h3>
+                <p>A controlled multi-agent financial market simulation evaluating accountability under hidden risk. Utilizes LoRA-fine-tuned LLaMA 3 models interacting through an active Model Context Protocol (MCP) governance layer to test norm diffusion amid exogenous liquidity shocks.</p>
+                <div class="tags">
+                    <span class="tag">LLMs</span>
+                    <span class="tag">Multi-Agent Systems</span>
+                    <span class="tag">MCP</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Aethelgard's Respite</h3>
+                <p>A physical-to-digital bridge and persistent neural game engine. Integrates physical telemetry with a local Creation Engine environment via SKSE, Mantella, and a 30B parameter local model orchestrator for autonomous, context-aware NPC generation.</p>
+                <div class="tags">
+                    <span class="tag">Ollama</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Game Engine APIs</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>The Sovereign Skateboard</h3>
+                <p>A technical framework for fleet EV ownership and autonomy. Deploys isolated CAN bus listening posts via Raspberry Pi and custom Python heuristics to decode proprietary commercial vehicle telemetry and bypass fleet management locks.</p>
+                <div class="tags">
+                    <span class="tag">CAN Bus</span>
+                    <span class="tag">Hardware</span>
+                    <span class="tag">Telemetry</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact: <a href="mailto:jperegoy@litpathlabs.com">jperegoy@litpathlabs.com</a></p>
+        <p>&copy; 2026 LitPath Labs. All metrics empirical.</p>
+    </footer>
 </body>
 </html>
