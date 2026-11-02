@@ -134,9 +134,40 @@
             background-color: #eab308;
         }
 
-        .card p.links {
-            margin: -0.5rem 0 1.5rem 0;
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: -0.25rem 0 1.5rem 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
             font-weight: 600;
+            border: 1px solid var(--accent);
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .button.primary {
+            background-color: var(--accent);
+            color: #ffffff;
+        }
+
+        .button.primary:hover {
+            background-color: #6366f1;
+            color: #ffffff;
+        }
+
+        .button.secondary {
+            color: #a5b4fc;
+        }
+
+        .button.secondary:hover {
+            background-color: rgba(79, 70, 229, 0.15);
+            color: #c7d2fe;
         }
 
         h2.section {
@@ -245,7 +276,10 @@
                 <h3>Without Lying to Yourself</h3>
                 <p class="status">First edition &middot; free to read</p>
                 <p>A field manual for running AI workloads on GB10 hardware, built from real incidents: twelve plates on the failures that look like success &mdash; a healthy ping on a wedged box, an idle process squatting on memory, a job that exits clean and delivers nothing.</p>
-                <p class="links"><a href="manual/">Read online</a> &middot; <a href="manual/Without-Lying-to-Yourself.pdf">Download the PDF (56 pages, 0.9 MB)</a></p>
+                <div class="actions">
+                    <a class="button primary" href="manual/">Read online</a>
+                    <a class="button secondary" href="manual/Without-Lying-to-Yourself.pdf">Download PDF &middot; 56 pages, 0.9 MB</a>
+                </div>
                 <div class="tags">
                     <span class="tag">Field Manual</span>
                     <span class="tag">GB10</span>
