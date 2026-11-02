@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LitPath Labs | AI Systems & Prototyping</title>
+    <meta name="description" content="LitPath Labs builds AI systems on owned hardware: local inference on NVIDIA GB10, multi-agent research, game-asset pipelines and a free field manual for running AI workloads without lying to yourself.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LitPath Labs">
+    <meta property="og:title" content="LitPath Labs | AI Systems & Prototyping">
+    <meta property="og:description" content="AI systems on owned hardware with owned weights. All metrics empirical.">
+    <meta property="og:url" content="https://litpathlabs.com/">
+    <meta property="og:image" content="https://litpathlabs.com/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="LitPath Labs: AI Systems &amp; Prototyping">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <style>
         :root {
             --bg-color: #0a0a0a;
@@ -12,6 +25,8 @@
             --accent: #4f46e5;
             --card-bg: #171717;
             --border: #262626;
+            --link: #818cf8;
+            --link-hover: #c7d2fe;
         }
         
         body {
@@ -75,12 +90,6 @@
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 2rem;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .card:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
         }
 
         .card h3 {
@@ -93,6 +102,12 @@
             color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
+            max-width: 68ch;
+        }
+
+        .grid.single {
+            grid-template-columns: minmax(0, 1fr);
+            max-width: 760px;
         }
 
         .tags {
@@ -191,13 +206,19 @@
         }
 
         a {
-            color: var(--accent);
+            color: var(--link);
             text-decoration: none;
             transition: color 0.2s ease;
         }
 
         a:hover {
-            color: #818cf8;
+            color: var(--link-hover);
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--link-hover);
+            outline-offset: 3px;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -271,7 +292,7 @@
         </div>
 
         <h2 class="section">Writing</h2>
-        <div class="grid">
+        <div class="grid single">
             <div class="card">
                 <h3>Without Lying to Yourself</h3>
                 <p class="status">First edition &middot; free to read</p>
